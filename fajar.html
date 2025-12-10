@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Fajar Dhya Ramadhan</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f7f8fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #007bff, #00c6ff);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .page {
+            display: none;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+            animation: fade 0.4s ease;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #about img {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #007bff;
+        }
+
+        .info-box, .project-card, .contact-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .contact-box {
+            background: #007bff;
+            color: white;
+            text-align: left;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: white;
+            color: #007bff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fajar Dhya Ramadhan</h1>
+    <p>Web Developer | Designer | Freelancer</p>
+</header>
+
+<nav>
+    <a onclick="showPage('about')">Tentang</a>
+    <a onclick="showPage('skills')">Keterampilan</a>
+    <a onclick="showPage('projects')">Proyek</a>
+    <a onclick="showPage('contact')">Kontak</a>
+</nav>
+
+<!-- TENTANG -->
+<section id="about" class="page" style="display:block;">
+    <h2>Tentang Saya</h2>
+
+    <img src="WhatsApp Image 2025-11-27 at 04.55.25_81f067b2.jpg" alt="Foto Profil">
+
+    <p>
+        Halo! Saya seorang creator yang menyukai seni visual dan terus mengembangkan kemampuan
+        menggambar digital maupun tradisional.
+    </p>
+</section>
+
+<!-- KETERAMPILAN -->
+<section id="skills" class="page">
+    <h2>Keterampilan Menggambar</h2>
+    <div class="info-box">
+        <p><b>Sketching:</b> 95%</p>
+        <p><b>Line Art:</b> 90%</p>
+        <p><b>Coloring:</b> 85%</p>
+        <p><b>Character Design:</b> 90%</p>
+    </div>
+</section>
+
+<!-- PROYEK -->
+<section id="projects" class="page">
+    <h2>Proyek Saya</h2>
+
+    <div class="project-card">
+        <h3>Ilustrasi Karakter</h3>
+        <p>Karya ilustrasi karakter gaya semi realis/anime.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Digital Art</h3>
+        <p>Dibuat menggunakan IbisPaint / Procreate.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Sketch Book Collection</h3>
+        <p>Kumpulan sketch tangan dari berbagai konsep.</p>
+    </div>
+</section>
+
+<!-- KONTAK + FORM (GOOGLE FORM) -->
+<section id="contact" class="page">
+    <h2>Kontak</h2>
+
+    <div class="contact-box">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfExampleID/formResponse" method="POST" target="_blank">
+
+            <label>Nama:</label>
+            <input type="text" name="entry.1111111" placeholder="Nama lengkap" required>
+
+            <label>Email:</label>
+            <input type="email" name="entry.2222222" placeholder="Email aktif" required>
+
+            <label>Pesan:</label>
+            <textarea name="entry.3333333" placeholder="Tulis pesanmu..." required></textarea>
+
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    © 2025 Portfolio Fajar Dhya Ramadhan — Dibuat dengan ❤️
+</footer>
+
+<script>
+function showPage(pageName) {
+    let pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.style.display = 'none');
+
+    document.getElementById(pageName).style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
